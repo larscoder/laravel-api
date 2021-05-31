@@ -14,6 +14,16 @@ class PostCollection extends ResourceCollection
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'data' => $this->collection,
+            'meta' => [
+                'organization' => 'Platzi',
+                'authors' => [
+                    'LARS',
+                    'Paltzi'
+                ],
+                'type' => 'aticles',
+            ]
+        ];
     }
 }
